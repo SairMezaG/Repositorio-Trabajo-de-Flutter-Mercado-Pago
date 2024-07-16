@@ -1,23 +1,26 @@
+
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 import 'package:mercado_pago_col/Menu.dart';
 
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class PaginaDeInicio extends StatelessWidget {
+  const PaginaDeInicio({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber[700],
+        backgroundColor: Colors.blue[700],
         foregroundColor: Colors.white,
         title: Padding(
           padding: const EdgeInsets.only(top: 8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text('Mercado Pago'),
+              const Text('Mercado Pago Colombia'),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/inicioDeSesion');
@@ -55,14 +58,14 @@ class HomePage extends StatelessWidget {
                     ),                       
                   ),        
                 ),
-                const SizedBox(width: 10),
+                const SizedBox(width: 50),
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(Icons.favorite_border_rounded),color:Colors.amber[700],
+                  icon: const Icon(Icons.favorite_border_rounded),color:Colors.black,
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(Icons.notifications_sharp),color:Colors.amber[700],
+                  icon: const Icon(Icons.notifications_sharp),color:Colors.black,
                 )
               ],
             ),
@@ -86,7 +89,7 @@ class HomePage extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(menu[index]['icono'], color:Colors.amber[700]),
+                          Icon(menu[index]['icono'], color:Colors.black),
                           const SizedBox(width: 10),
                           Text(
                             menu[index]['titulo'],
@@ -106,9 +109,9 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
-               BottomNavigationBarItem(icon: Icon(Icons.home, size:30.0 ,color: Colors.amber[700]),label:'Inicio'),
-               BottomNavigationBarItem(icon: Icon(Icons.shop_2, size:30.0 ,color: Colors.amber[700]),label:'Comprar'),
-               BottomNavigationBarItem(icon: Icon(Icons.exit_to_app_rounded, size:30.0 ,color: Colors.amber[700]),label:'Salir')
+               BottomNavigationBarItem(icon: Icon(Icons.home, size:30.0 ,color: Colors.blue[700]),label:'Inicio'),
+               BottomNavigationBarItem(icon: Icon(Icons.shop_2, size:30.0 ,color: Colors.blue[700]),label:'Comprar'),
+               BottomNavigationBarItem(icon: Icon(Icons.exit_to_app_rounded, size:30.0 ,color: Colors.blue[700]),label:'Salir')
               ]
         )
       );

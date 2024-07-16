@@ -1,4 +1,7 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: file_names
+
+//Sugerencias dadas por las ayudas de flutter para corregir los errores que se muestran en la terminal
+import 'package:flutter/material.dart' show BorderRadius, BuildContext, Center, Colors, Column, EdgeInsets, ElevatedButton, FontWeight, Form, FormState, GlobalKey, Icon, Icons, Image, InputDecoration, Navigator, OutlineInputBorder, Padding, RoundedRectangleBorder, Scaffold, SingleChildScrollView, SizedBox, State, StatefulWidget, Text, TextButton, TextFormField, TextStyle, Widget;
 
 class Registrarse extends StatefulWidget {
   const Registrarse({super.key});
@@ -19,9 +22,11 @@ class _RegistrarseState extends State<Registrarse> {
        child: Form(
         key:_formKey,
         child: Column(
-                children: [
-                  const SizedBox(height: 10),
-                  
+          children: [Image.network("https://cdn-icons-png.flaticon.com/128/758/758669.png",
+          width: 100,
+          height: 100,
+          ),
+          const SizedBox(height: 10),
           const Text("REGISTRO",
           style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),
           ),
@@ -60,7 +65,7 @@ class _RegistrarseState extends State<Registrarse> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0)
                 ),
-                backgroundColor: Colors.orangeAccent[700],
+                backgroundColor: Colors.blue[700],
                 foregroundColor: Colors.white,
                ),
                child: const Text('Regístrate'),
@@ -72,7 +77,7 @@ class _RegistrarseState extends State<Registrarse> {
             },
              child: const Text(
               '¿Ya tienes una cuenta? Inicia Sesion',
-              style: TextStyle(color: Colors.indigo),
+              style: TextStyle(color: Colors.black),
              ))
           ]
         )

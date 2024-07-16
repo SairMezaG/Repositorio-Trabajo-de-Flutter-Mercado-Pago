@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const PaginaDeInicio(),
       routes: {
         '/inicioDeSesion': (context) => const Login(),
         '/registroDeUsuarios':(context) => const Registrarse()

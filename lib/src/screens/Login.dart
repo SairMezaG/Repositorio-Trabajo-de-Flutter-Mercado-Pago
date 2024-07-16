@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -13,16 +15,20 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8),
-          child: SingleChildScrollView(
-            child: Form(
-              key: _formKey,
-              child: Column(
-                children: [
-                  const SizedBox(height: 16.0),
+        child: Padding(padding: const EdgeInsets.all(8),
+        child: SingleChildScrollView(
+          child: Form(
+            key: _formKey, 
+            child: Column(    
+              children: [Image.network("https://cdn-icons-png.flaticon.com/128/758/758669.png",
+              width: 100,
+              height: 100,
+            ),
+            const SizedBox(height: 16.0),
             const Text('Mercado Pago Colombia',
-  
+            style:TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 16.0),
+            const Text('Iniciar Sesion para continuar',
             style:TextStyle(fontSize: 16.0, color: Colors.grey)),
             const SizedBox(height: 30),
             TextField(
@@ -46,15 +52,15 @@ class _LoginState extends State<Login> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0)
                 ),
-                backgroundColor: Colors.orangeAccent[700],
+                backgroundColor: Colors.blue[700],
                 foregroundColor: Colors.white,
                ),
                child: const Text('Iniciar Sesion'),
                ),
             ),
             const SizedBox(height: 20.0),
-            const Text('O Inicie Sesion con:',
-            style: TextStyle(color: Colors.orange),
+            const Text('OR',
+            style: TextStyle(color: Colors.blue),
             ),
             const SizedBox(height: 16.0),
             SizedBox(
