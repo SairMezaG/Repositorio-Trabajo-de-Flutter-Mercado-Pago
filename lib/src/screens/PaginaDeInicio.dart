@@ -74,7 +74,7 @@ class HomePage extends StatelessWidget {
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
                 ),
-                itemCount: categories.length,
+                itemCount: menu.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Card(
                   elevation: 2.0,
@@ -86,10 +86,10 @@ class HomePage extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(categories[index]['icono'], color:Colors.amber[700]),
+                          Icon(menu[index]['icono'], color:Colors.amber[700]),
                           const SizedBox(width: 10),
                           Text(
-                            categories[index]['titulo'],
+                            menu[index]['titulo'],
                             textAlign: TextAlign.center,
                             style:const TextStyle(fontSize: 12.0),
                           )
